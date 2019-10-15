@@ -15,6 +15,5 @@ npm_run_build {
     inputs.files fileTree("src")
     inputs.file 'package.json'
     inputs.file 'package-lock.json'
-    outputs.dir 'build'
 }
 

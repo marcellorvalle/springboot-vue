@@ -18,7 +18,14 @@ dependencies {
 }
 
 processResources {
-	println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
+	def names = []
+	fileTree("${rootProject.projectDir}/frontend/dist/").visit { FileVisitDetails details -> 
+    	names << details.file.path 
+	}
+
+	println names
+
+	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
 
 	from ("${rootProject.projectDir}/frontend/dist/") {
 		into 'static'
