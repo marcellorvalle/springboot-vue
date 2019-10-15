@@ -23,6 +23,15 @@ processResources {
     	names << details.file.path 
 	}
 
+	println "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+	println names
+
+	def names = []
+	fileTree("/frontend/dist/").visit { FileVisitDetails details -> 
+    	names << details.file.path 
+	}
+
+	println "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
 	println names
 
 	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
