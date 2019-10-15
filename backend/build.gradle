@@ -32,7 +32,7 @@ processResources {
 	}
 
 	println "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-	println names
+	println names2
 
 	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
 
