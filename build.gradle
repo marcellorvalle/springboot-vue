@@ -2,4 +2,4 @@ plugins {
 	id 'java'
 }
 
-task stage(dependsOn: [':backend:bootJar'])
+task stage(dependsOn: ['clean', ':backend:bootJar'])

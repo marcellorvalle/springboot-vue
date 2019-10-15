@@ -18,7 +18,7 @@ dependencies {
 }
 
 processResources {
-	from ('../frontend/dist/') {
+	from ("${rootProject.projectDir}/frontend/dist/") {
 		into 'static'
 	}
 }
