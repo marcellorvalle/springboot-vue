@@ -26,9 +26,9 @@ processResources {
 	println "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 	println names
 
-	def names = []
+	def names2 = []
 	fileTree("/frontend/dist/").visit { FileVisitDetails details -> 
-    	names << details.file.path 
+    	names2 << details.file.path 
 	}
 
 	println "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
