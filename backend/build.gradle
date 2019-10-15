@@ -20,7 +20,7 @@ dependencies {
 processResources {
 	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
 
-	from ("${rootProject.projectDir}/tmp/") {
+	from ("${rootProject.projectDir}/frontend/tmp/") {
 		into 'static'
 	}
 }
