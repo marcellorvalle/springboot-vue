@@ -35,5 +35,3 @@ out/
 node_modules
 dist
 build
-
-!frontend/tmp/index.html

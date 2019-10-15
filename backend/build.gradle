@@ -17,10 +17,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-processResources {
-	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
-
-	from ("${rootProject.projectDir}/frontend/tmp/") {
+bootJar {
+	from ("${rootProject.projectDir}/frontend/dist/") {
 		into 'static'
 	}
 }

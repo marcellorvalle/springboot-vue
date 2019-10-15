@@ -2,4 +2,11 @@ plugins {
 	id 'java'
 }
 
-task stage(dependsOn: ['clean', ':backend:bootJar'])
+task stage {
+	dependsOn 'clean'
+	dependsOn 'build'
+
+	tasks.findByName('build').mustRunAfter 'clean' 
+}
+
+build.dependsOn(':backend:bootJar')
