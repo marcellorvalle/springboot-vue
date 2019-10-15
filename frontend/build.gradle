@@ -11,14 +11,13 @@ node {
     download = true
 }
 
-clean.doFirst {
-    delete 'dist'
-    delete 'build'
-}
-
-/*npm_run_build {
+npm_run_build {
     inputs.files fileTree("public")
     inputs.files fileTree("src")
     inputs.file 'package.json'
-    inputs.file 'package-lock.json'  
-}*/
+    inputs.file 'package-lock.json'
+}
+
+clean.doFirst {
+    delete 'dist'
+}
