@@ -4,7 +4,7 @@ plugins {
 
 task stage {
 	dependsOn 'clean'
-	dependsOn 'build'
+	dependsOn ':backend:bootJar'
 
 	tasks.findByName('build').mustRunAfter 'clean' 
 }
