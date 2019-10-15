@@ -18,15 +18,11 @@ dependencies {
 }
 
 processResources {
-	println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
+	//println "Copiando ${rootProject.projectDir}/frontend/dist/ para static"
 
-	from ("~/frontend/dist/") {
+	from ("${rootProject.projectDir}/tmp/") {
 		into 'static'
 	}
-
-	//from ("${rootProject.projectDir}/frontend/dist/") {
-	//	into 'static'
-	//}
 }
 
 bootJar.dependsOn(':frontend:npm_run_build')
