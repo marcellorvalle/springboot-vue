@@ -17,10 +17,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-processResources {
-	from ('../frontend/dist/') {
-		into 'static'
-	}
+bootJar {
+	from('../frontend/dist') {
+        into 'static'
+    }
 }
 
 bootJar.dependsOn(':frontend:npm_run_build')
