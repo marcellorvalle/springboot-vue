@@ -14,7 +14,9 @@
         private mensagem: string = '';
 
         public chamadaRemota() {
-            Axios.get('http://localhost:8080/hello')
+            const backend = process.env.VUE_APP_BACKEND_URL || window.location.origin;
+
+            Axios.get(backend + '/hello')
                 .then((response) => (this.mensagem = response.data));
         }
     }
